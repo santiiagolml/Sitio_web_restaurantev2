@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú</title>
+    <meta name="viewport" content="width=device-width,user-scalable=yes, initial-scale=1.0,maximun-scale=3.0,minimun-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script>
+      var myModal = document.getElementById('myModal')
+      var myInput = document.getElementById('myInput')
+      myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+    </script>
+ 
+</head>
+<body>
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <img src="img/resta.jpg" alt="" class="modal__img" id="modal__img">
+        </div>
+        <div class="modal__boton" id="modal__boton">X</div>
+    </div>
+   <header class="main-header">
+       <div class="container--flex">
+         <div class="logo-container column column--50">
+             <h1 class="logo" style="padding-left: 30px; ">Italian food</h1>
+         </div>
+         <div class="main-header__contactInfo column column--50">
+             <p class="main-header__contactInfo__phone">
+                 <span class="icon-phone">6893457</span>
+             </p>
+             <p class="main-header__contactInfo__address">
+                <span class="icon-map">Carrera 156 #135-24 Bogota,Colombia</span> 
+             </p>
+         </div>
+       </div>
+   </header>
+   <nav class="main-nav">
+       <div class="container container--flex">
+        <span class="icon-menu" id="btnmenu"></span>
+        <ul class="menu" id="menu">
+            <li class="menu__item"><a a href="index.html" class="menu__link">Inicio</a></li>
+            <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
+            <li class="menu__item"><a href="menu.html" class="menu__link menu__link--select">Menu</a></li>
+            <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
+             <li class="menu__item"><a href="servicios.html" class="menu__link">Servicios</a></li>
+            <li class="menu__item"><a href="mapadesitio.html" class="menu__link">Ubicacion</a></li>
+        </ul>
+        <div class="social-icon">
+            <a href="" class="social-icon__link"><span class="icon-whatsapp"></span></a>
+            <a href="" class="social-icon__link"><span class="icon-facebook-square"></span></a>
+            <a href="" class="social-icon__link"><span class="icon-instagram"></span></a>
+        </div>
+       </div>
+   </nav>
+   
+   <section class="banner">
+       <img src="img/resta.jpg" alt="" class="banner__img">
+       <div class="banner__content"><bold>Vive con nosotros la mejor experiencia en comida italiana</bold></div>
+   </section>
+
+   <main class="main">
+       
+       <div class="group gallery">
+           <h2 style="font-family: 'Pacifico', cursive; text-align: center; color: #DE423A; margin: 20px 0 20px 0;"class="group__title">Nuestro Menú</h2>
+           <div class="container container--flex">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="img/pasta.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pasta a la boloñesa</h5>
+                      <p class="card-text">Disfuta de nuestro espaggeti especial</p>
+                      
+                    </div>
+                   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Ver más
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Difuta de una pasta a la boloñesa acompañada de oregano  y 250 gramos de nuestra mejor carne especial</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+      </div>
+    </div>
+  </div>
+</div> 
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="img/pizza.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pizza </h5>
+                      <p class="card-text">Nuestra especialidad, las pizzas ven y disfuta de uestras pizzas artesanas con sabores distintos a los que estas acostumbrado</p>
+                    </div>
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  Ver más
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pizzas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Disfruta de la mejor piza del sector con sabores especiales como
+          -Napolitana
+          -Peperonni
+          -Hawaiana
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="img/raviolis.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ravioles</h5>
+                      <p class="card-text">Degusta nuestros mas exquisitos raviolis a la italiana</p>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                      Ver más
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Raviolis</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Disfruta nuestros mejores ravioles a tu gusto tenemos a tu disposicion de carne, pollo y mixtos
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="img/brochetas.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Brochetas</h5>
+                      <p class="card-text">Nuestras Brochetas de mar las mejores de la zona acompañadas de langostinos </p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                      Ver más
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Brochetas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Disfruta nuestras mejores brochetas y armala a tu gusto, tenemos de polllo,carne de res, langostinos y verduras
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <img src="img/panzeroti.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Panzeroti</h5>
+                        <p class="card-text">Disfruta de nuestros mejores panzerotis de la zona</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Panzerotis</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Disfruta de nuestros mejores panzerotis con relleno de carne o pollo
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/lasagna.jpg" class="card-img-top" alt=".">
+                      <div class="card-body">
+                        <h5 class="card-title">Lasaña</h5>
+                        <p class="card-text">Degusta las mejres lasañas de la zona</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Lasañas</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Disfuta de las mejores lasañas, tenemos a tu dispocicion de carne, pollo o mixta
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/costillas.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Costillas bbq</h5>
+                        <p class="card-text">Disfruta de las mejores Costillas de cerdo de la zona.</p>
+                      </div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Costillas bbq</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                Disfruta de nuestras Costillas bbq acompañadas de papas a la francesay salsa de la casa
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/hamburguesa.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Hamburguesa</h5>
+                        <p class="card-text">Disfruta de nuestras hamburguesas 100% artesanales</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Hamburguesas</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                Disfruta de nuestras Hamburgusas artesanales con carne de res  vegetales y pan artesanalas acompañado de papasa la francesas
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/bistec.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Bistec a caballo</h5>
+                        <p class="card-text">Disfruta de nuestros mejores cortes y preparaciones de bistec a tu disposicion</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Bistec a caballo</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                Disfruta de nuestr mas exclusiva carne de res y pidela con tu acompañamiento de preferencia
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/ensalada.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Ensaladas</h5>
+                        <p class="card-text">Tenemos las mejores y mas ricas ensaladas para nuestros clientes veganos</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal8">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Ensaladas</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                Disfruta de nuestras mejores ensaladas con las verduras mas frescas a tu disposicion
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/sandwich.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Sandwich</h5>
+                        <p class="card-text">Tenemos las mejores sandwich del mercado</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal11">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Sandwich</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                Disfruta de nuestros sanchiz con peperoni queso provoloe, verduras frescas y pan baggete
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="img/musse.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Postre musse</h5>
+                        <p class="card-text">disfruta de nuestros mejores musse</p>
+                      </div>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal10">
+                        Ver más
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Ensaladas</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>
+                                Disfruta de nuestro mejor postre inspirado en la bella italia
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+           </div>
+       </div>
+   </main>
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Mapa del sitio</h5>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white"style="text-decoration:none">Restaurante Italianfood ltda</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"style="text-decoration:none">Carrera 156 #135-24 Bogota,Colombia</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"style="text-decoration:none">Italianfood@contact.com</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white" style="text-decoration:none">Teléfono: 6893457</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contactenos</h5>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         <h5 class="text-uppercase">Reservas</h5>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <iframe  class="mapadesitio" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.1568351584347!2d-74.12855058569626!3d4.742791442612869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f837e78dfb3e7%3A0xd98deb4a738cad5c!2sCra.%20156%20%23135-24%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1632106181358!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2021 Copyright
+  </div>
+</footer>
+<script src="js/menu.js"></script>
+<script src="js/modal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>

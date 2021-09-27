@@ -63,7 +63,76 @@
                     <div class="card-body">
                       <h5 class="card-title">Celebración de cumpleaños</h5>
                       <p class="card-text">Ven a celebrar en familia, amigos, y tus seres queridos en nuestras instalaciones donde cantaremos tu cumpleaños con un pastel y serenata.
-                        <a href="contacto.html"><input type="submit" class="btn formulario__btn" value="¿preguntas?"></a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Reserva en línea
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Formulario de reserva</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3 needs-validation" novalidate>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="validationTooltip01" value="Fernando Suarez" required>
+                                    <div class="valid-tooltip">
+                                      Se ve bien!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" id="validationTooltip02" value="Example@example.com" required>
+                                    <div class="valid-tooltip">
+                                      Se ve bien!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Numero Telefonico</label>
+                                    <div class="input-group has-validation">
+                                      <input type="number" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                      <div class="invalid-tooltip">
+                                        Porfavor digite un numero telefonico valido.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip03" class="form-label">Numero de personas</label>
+                                    <input type="number" class="form-control" id="validationTooltip03" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor seleccione un numero valido de personas.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Fecha de reserva</label>
+                                    <input type="datetime-local" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor seleccione una fecha correcta.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Solicitud adicional</label>
+                                    <input type="text" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor escriba una solicitud.
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
                       </p>
                     </div>
                   </div>
@@ -74,7 +143,76 @@
                     <div class="card-body">
                       <h5 class="card-title">Aniversarios </h5>
                       <p class="card-text">Queremos recibirte en esa fecha especial con tu pareja por eso brindamos nuestras instalaciones para conmemorar y celebrar ese dia tan especial con tu pareja</p>
-                      <a href="contacto.html"><input type="submit" class="btn formulario__btn" value="¿preguntas?"></a>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Reserva en línea
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Formulario de reserva</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                  <input type="text" class="form-control" id="validationTooltip01" value="Fernando Suarez" required>
+                                  <div class="valid-tooltip">
+                                    Se ve bien!
+                                  </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip02" class="form-label">Correo Electronico</label>
+                                  <input type="email" class="form-control" id="validationTooltip02" value="Example@example.com" required>
+                                  <div class="valid-tooltip">
+                                    Se ve bien!
+                                  </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip02" class="form-label">Numero Telefonico</label>
+                                  <div class="input-group has-validation">
+                                    <input type="number" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor digite un numero telefonico valido.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                  <label for="validationTooltip03" class="form-label">Numero de personas</label>
+                                  <input type="number" class="form-control" id="validationTooltip03" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor seleccione un numero valido de personas.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                  <label for="validationTooltip05" class="form-label">Fecha de reserva</label>
+                                  <input type="datetime-local" class="form-control" id="validationTooltip05" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor seleccione una fecha correcta.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                  <label for="validationTooltip05" class="form-label">Solicitud adicional</label>
+                                  <input type="text" class="form-control" id="validationTooltip05" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor escriba una solicitud.
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <button class="btn btn-primary" type="submit">Enviar</button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
                     </div>
                   </div>
                 </div>
@@ -84,7 +222,76 @@
                     <div class="card-body">
                       <h5 class="card-title">Fiestas infantiles</h5>
                       <p class="card-text">Ven con los mas pequeños para compartir y disfrutar, ofrecemos fiestas tematizadas recreadores, show de titeres y mucho mas</p>
-                      <a href="contacto.html"><input type="submit" class="btn formulario__btn" value="¿preguntas?"></a>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Reserva en línea
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Formulario de reserva</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                  <input type="text" class="form-control" id="validationTooltip01" value="Fernando Suarez" required>
+                                  <div class="valid-tooltip">
+                                    Se ve bien!
+                                  </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip02" class="form-label">Correo Electronico</label>
+                                  <input type="email" class="form-control" id="validationTooltip02" value="Example@example.com" required>
+                                  <div class="valid-tooltip">
+                                    Se ve bien!
+                                  </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip02" class="form-label">Numero Telefonico</label>
+                                  <div class="input-group has-validation">
+                                    <input type="number" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor digite un numero telefonico valido.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                  <label for="validationTooltip03" class="form-label">Numero de personas</label>
+                                  <input type="number" class="form-control" id="validationTooltip03" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor seleccione un numero valido de personas.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                  <label for="validationTooltip05" class="form-label">Fecha de reserva</label>
+                                  <input type="datetime-local" class="form-control" id="validationTooltip05" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor seleccione una fecha correcta.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                  <label for="validationTooltip05" class="form-label">Solicitud adicional</label>
+                                  <input type="text" class="form-control" id="validationTooltip05" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor escriba una solicitud.
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <button class="btn btn-primary" type="submit">Enviar</button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
                     </div>
                   </div>
                 </div>
@@ -94,7 +301,76 @@
                     <div class="card-body">
                       <h5 class="card-title">Declaraiones o propuestas</h5>
                       <p class="card-text">Ven y dale esa sorpresa a tu pareja con las ideas mas ingeniosas acompañado de una velada romantica</p>
-                      <a href="contacto.html"><input type="submit" class="btn formulario__btn" value="¿preguntas?"></a>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Reserva en línea
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Formulario de reserva</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                  <input type="text" class="form-control" id="validationTooltip01" value="Fernando Suarez" required>
+                                  <div class="valid-tooltip">
+                                    Se ve bien!
+                                  </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip02" class="form-label">Correo Electronico</label>
+                                  <input type="email" class="form-control" id="validationTooltip02" value="Example@example.com" required>
+                                  <div class="valid-tooltip">
+                                    Se ve bien!
+                                  </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                  <label for="validationTooltip02" class="form-label">Numero Telefonico</label>
+                                  <div class="input-group has-validation">
+                                    <input type="number" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor digite un numero telefonico valido.
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                  <label for="validationTooltip03" class="form-label">Numero de personas</label>
+                                  <input type="number" class="form-control" id="validationTooltip03" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor seleccione un numero valido de personas.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                  <label for="validationTooltip05" class="form-label">Fecha de reserva</label>
+                                  <input type="datetime-local" class="form-control" id="validationTooltip05" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor seleccione una fecha correcta.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                  <label for="validationTooltip05" class="form-label">Solicitud adicional</label>
+                                  <input type="text" class="form-control" id="validationTooltip05" required>
+                                  <div class="invalid-tooltip">
+                                    Porfavor escriba una solicitud.
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <button class="btn btn-primary" type="submit">Enviar</button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
                     </div>
                   </div>
                 </div>
@@ -104,7 +380,76 @@
                       <div class="card-body">
                         <h5 class="card-title">Despedidas</h5>
                         <p class="card-text">Vive con nosostros las fiestas de despedida mas emocionantes acompañado de tus seres mas allegados y excelente comida</p>
-                        <a href="contacto.html"><input type="submit" class="btn formulario__btn" value="¿preguntas?"></a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Reserva en línea
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Formulario de reserva</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3 needs-validation" novalidate>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="validationTooltip01" value="Fernando Suarez" required>
+                                    <div class="valid-tooltip">
+                                      Se ve bien!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" id="validationTooltip02" value="Example@example.com" required>
+                                    <div class="valid-tooltip">
+                                      Se ve bien!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Numero Telefonico</label>
+                                    <div class="input-group has-validation">
+                                      <input type="number" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                      <div class="invalid-tooltip">
+                                        Porfavor digite un numero telefonico valido.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip03" class="form-label">Numero de personas</label>
+                                    <input type="number" class="form-control" id="validationTooltip03" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor seleccione un numero valido de personas.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Fecha de reserva</label>
+                                    <input type="datetime-local" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor seleccione una fecha correcta.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Solicitud adicional</label>
+                                    <input type="text" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor escriba una solicitud.
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
                       </div>
                     </div>
                   </div>
@@ -114,7 +459,76 @@
                       <div class="card-body">
                         <h5 class="card-title">Cena con amigos</h5>
                         <p class="card-text">Disfruta de nuestras instalaciones para reunirte con tus mejores amigos y deleitar de nuestros mejores platos </p>
-                        <a href="contacto.html"><input type="submit" class="btn formulario__btn" value="¿preguntas?"></a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Reserva en línea
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Formulario de reserva</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form class="row g-3 needs-validation" novalidate>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip01" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="validationTooltip01" value="Fernando Suarez" required>
+                                    <div class="valid-tooltip">
+                                      Se ve bien!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Correo Electronico</label>
+                                    <input type="email" class="form-control" id="validationTooltip02" value="Example@example.com" required>
+                                    <div class="valid-tooltip">
+                                      Se ve bien!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Numero Telefonico</label>
+                                    <div class="input-group has-validation">
+                                      <input type="number" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+                                      <div class="invalid-tooltip">
+                                        Porfavor digite un numero telefonico valido.
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip03" class="form-label">Numero de personas</label>
+                                    <input type="number" class="form-control" id="validationTooltip03" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor seleccione un numero valido de personas.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Fecha de reserva</label>
+                                    <input type="datetime-local" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor seleccione una fecha correcta.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Solicitud adicional</label>
+                                    <input type="text" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                      Porfavor escriba una solicitud.
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div> 
                       </div>
                     </div>
                   </div>
@@ -163,6 +577,34 @@
 <script src="js/menu.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+<script>
+  var myModal = document.getElementById('myModal')
+  var myInput = document.getElementById('myInput')
+  myModal.addEventListener('shown.bs.modal', function () {
+myInput.focus()
+})
+</script>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
 
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
 </body>
 </html>

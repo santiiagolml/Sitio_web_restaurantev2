@@ -70,24 +70,70 @@
               </div>
           </div>
 
-        <form action="" method="post" class="formulario column column--50">
-            <select name= opciones>
-              <option disabled selected>Seleccione el servicio</option>
-              <option>Celebracion de cumpleaños</option>
-              <option>Aniversario</option>
-              <option>Fiestas infantiles</option>
-              <option>Declaraciones o propuestas</option>
-              <option>Despedidas</option>
-              <option>Cena con amigos</option>
-            </select><br>
-              <input type="text" class="formulario__input-txt" placeholder="Asunto"><br>
-              <input type="text" class="formulario__input-txt" placeholder="Nombre completo"><br>
-              <input type="text" class="formulario__input-txt" placeholder="Correo electronico"><br>
-           
-              <textarea name="comentarios" rows="10" cols="40" placeholder="Su mensaje"></textarea><br>
-             <input type="checkbox" name="acuerdo"> Acepto Términos y condiciones
-             <input type="submit" class="btn formulario__btn" name="Enviar">
-          </form>
+ <!--formulario-->
+ <div class = "row">
+  <form action = "enviar.php" class="was-validated">
+    <div class="col-md-12">
+    <label for="validationDefault03" class="form-label">Asunto</label>
+    <input type="text" name = "asunto" class="form-control" id="validationDefault03" required>
+        <div class="invalid-feedback">
+          ingrese el asunto
+        </div>
+      </div>
+
+
+      <div class="col-md-12">
+        <label for="validationServer01" class="form-label">Nombre</label>
+        <input type="text" name = "nombre" class="form-control is-valid" id="validationServer01" value="" required>
+        <div class="invalid-feedback">
+          ingrese su nombre
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+        <input type="email" name = "correo" class="form-control" id="exampleFormControlInput1" placeholder="correo@example.com" required>
+      </div>
+    
+      <div class="mb-3">
+        <select class="form-select" name = "servicio" required aria-label="select example">
+          <option value="">Seleccione el tipo de servicio</option>
+          <option value="1">Celebracion de cumpleaños</option>
+          <option value="2">Aniversarios</option>
+          <option value="3">Fiestas infantiles</option>
+          <option value="4">Declaraciones o propuestas</option>
+          <option value="5">Despedidas</option>
+          <option value="6">Cena con amigos</option>
+        </select>
+        <div class="invalid-feedback">Seleccion invalida</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="validationDefault03" class="form-label">Pedido especial</label>
+        <input type="text" name = "servicioe" class="form-control" id="validationDefault03" required>
+            <div class="invalid-feedback">
+              Requiere algun servicio espaecial?
+            </div>
+          </div>
+    
+    
+      
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+        <label class="form-check-label" for="validationFormCheck1">Acepta el tratamiento de datos?</label>
+        <div class="invalid-feedback">Acepte el tratamiento de datos</div>
+      </div>
+  <div class="mb-3">
+        <button class="btn btn-primary" type="submit" enabled >Enviar</button>
+      </div>
+      <div>
+    </div>
+    </form>
+  </div>
+<!---->
+
+
+
       </div>
       </section>
    </main>

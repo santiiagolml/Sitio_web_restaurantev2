@@ -10,12 +10,21 @@ let carrito = {};
 
 document.addEventListener('DOMContentLoaded', () => {
 	fetchData()
+	if (localStorage.getItem('carrito')){
+		carrito = JSON.parse(localStorage.getItem('carrito'));
+		pintarCarrito();
+	}
 })
 
 //Detecta cuando se hace click en el boton comprar
 cards.addEventListener('click', e => {
 	addCarrito(e);
 })
+
+items.addEventListener('click', e => {
+	btnAccion(e)
+})
+
 
 const fetchData = async() => {
 	try {
@@ -80,4 +89,56 @@ const pintarCarrito = () => {
 		fragment.appendChild(clone);
 	})
 	items.appendChild(fragment)
+
+	pintarFooter()
+	//se guardan los elementos en el localstorage
+	localStorage.setItem('carrito', JSON.stringify(carrito));
 }   
+
+const pintarFooter = () => {
+	footer.innerHTML = '';
+	if (Object.keys(carrito).length=== 0) {
+            
+		footer.innerHTML = '<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>'
+		return
+	}
+	const nCantidad = Object.values(carrito).reduce((acc, {cantidad})=> acc + cantidad,0);
+	const nPrecio = Object.values(carrito).reduce((acc, {cantidad,precio})=> acc + cantidad * precio,0);
+	console.log(nPrecio);
+
+	templateFooter.querySelectorAll('td')[0].textContent = nCantidad;
+	templateFooter.querySelector('span').textContent = nPrecio;
+
+	const clone = templateFooter.cloneNode(true);
+	fragment.appendChild(clone);
+	footer.appendChild(fragment);
+
+	const btnVaciar = document.getElementById('vaciar-carrito');
+	btnVaciar.addEventListener('click', () => {
+		carrito = {};
+		pintarCarrito();
+	})
+}
+//funcion a los botones de aumentar y disminuir productos
+const btnAccion = e => {
+	//console.log(e.target);
+	//Se usa para aumentar elementos
+	if (e.target.classList.contains('btn-info')) {
+	//console.log(carrito[e.target.dataset.id]);
+	//	carrito[e.target.dataset.id];
+	const producto = carrito[e.target.dataset.id];
+	producto.cantidad++;
+	carrito[e.target.dataset.id] = {...producto};
+	pintarCarrito()
+}
+	if (e.target.classList.contains('btn-danger')) {
+		const producto = carrito[e.target.dataset.id];
+		producto.cantidad--;
+		if (producto.cantidad === 0 ) {
+			delete carrito[e.target.dataset.id];
+		}
+		pintarCarrito();
+	}
+
+	e.stopPropagation();
+}

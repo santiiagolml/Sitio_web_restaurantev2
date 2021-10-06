@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo{
     font-size: 1.8em;
     color: #DE423A;
-    padding: 10px;
+    padding-left: 30px;
     font-family: 'Pacifico', cursiva;
     font-weight: 100;
 }
@@ -56,10 +56,10 @@ h1, h2, h3, h4, h5, h6 {
     background: #DE423A;
     color: white;
     margin: 0 auto;
-    padding: 10px;
+    padding-right: 120px;
 }
 .main-header__contactInfo__address {
-    padding: 10px;
+    padding-right: 30px;
     margin: 0;   
 }
 .main-header [class*="icon-"]:before{
@@ -264,6 +264,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .main-header__contactInfo__phone {
         background: none;
+        
     }
     .main-header__contactInfo__address {
         color: white;
@@ -348,16 +349,23 @@ h1, h2, h3, h4, h5, h6 {
     .container {
         width: 1000px;
     }
-    .logo {
-        font-size: 2em;
-        padding: 0;
+    .logo{
+        font-size: 1.8em;
+        padding-left: 100px;
+        font-family: 'Pacifico', cursiva;
+        font-weight: 100;
     }
-    .main-header__contactInfo__phone,
+    .main-header__contactInfo__phone {
+        color: white;
+        margin: 0 auto;
+        padding-right: 120px;
+    }
     .main-header__contactInfo__address {
-        padding-right: 0;
-        font-size: 1.15;
+        padding-right: 30px;
+        margin: 0;   
     }
     .main-nav {
+        height:60px;
         padding: 0;
     }
     .banner__img {
@@ -372,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
     .menu {
         position: static;
         display: flex;
-        height: auto;
+        height: 60px;
         width: auto;
     }
     .menu__link {

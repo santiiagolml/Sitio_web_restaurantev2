@@ -1,3 +1,6 @@
+const items = document.getElementById('items');
+const templateCard =document.getElementById('template-card').content
+const fragment =document.createDocumentFragment();
 
 
 
@@ -7,12 +10,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchData = async() => {
 	try {
-		const res = await fetch('json/api.json', {
-  mode: 'no-cors',
-  credentials: 'include'
-})
-		const data = await res.json()
+		const res = await fetch('json/api.json');
+		const data = await res.json();
+		//console.log(data);
+		pintarCards(data);
 	} catch (error){
 		console.log(error)
 	}
+}
+//Muestra los elementos en el html
+const pintarCards= data =>{
+	data.forEach(producto=>{
+		templateCard.querySelector('h5').textContent = producto.title;
+		templateCard.querySelector('p').textContent = producto.precio;
+		templateCard.querySelector('img').setAttribute("src", producto.thumbnailUrl);
+		templateCard.querySelector('.btn-dark').dataset.id = producto.id;
+		const clone = templateCard.cloneNode(true);
+
+		//para evitar reflow se usa el fragment
+		fragment.appendChild(clone)
+	} )
+	items.appendChild(fragment)
 }

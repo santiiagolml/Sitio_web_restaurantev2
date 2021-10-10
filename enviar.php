@@ -20,6 +20,7 @@ $para = 'fabioannypro47@gmail.com';
 
 
 mail($para, $asunto, utf8_decode($message), $header);
+mail($correo, $asunto, utf8_decode($message), $header);
 
 header("Location:index.html");
 ?>

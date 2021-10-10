@@ -10,22 +10,14 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/font.css">
-    <script>
-      var myModal = document.getElementById('myModal')
-      var myInput = document.getElementById('myInput')
-      myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
-    </script>
+    <link rel="stylesheet" href="css/styles.css">
+ 
  
 </head>
 <body>
-    <div class="modal" id="modal">
-        <div class="modal__content">
-            <img src="img/resta.jpg" alt="" class="modal__img" id="modal__img">
-        </div>
-        <div class="modal__boton" id="modal__boton">X</div>
-    </div>
+
+
+   
    <header class="main-header">
        <div class="container--flex">
          <div class="logo-container column column--50">
@@ -48,10 +40,68 @@
             <li class="menu__item"><a a href="index.html" class="menu__link">Inicio</a></li>
             <li class="menu__item"><a href="nosotros.html" class="menu__link">Nosotros</a></li>
             <li class="menu__item"><a href="menu.html" class="menu__link menu__link--select">Menu</a></li>
-            <li class="menu__item"><a href="contacto.html" class="menu__link">Contacto</a></li>
+            <li class="menu__item"><a href="contacto.html" class="menu__link">Reservas</a></li>
              <li class="menu__item"><a href="servicios.html" class="menu__link">Servicios</a></li>
             <li class="menu__item"><a href="mapadesitio.html" class="menu__link">Ubicacion</a></li>
-        </ul>
+            <li class="menu__item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Ver compra
+            </button>
+            </li>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Compras a pagar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class=" shopping-cart-items modal-body">
+      
+          <div class = "tableCar">
+       </div>
+     
+      </div>
+
+      <div>
+           <!-- START TOTAL -->
+           <div class="row">
+            <div class="col-12">
+                <div class="shopping-cart-total d-flex align-items-center">
+                    <p class="mb-0">Total </p>
+                    <p class="ml-4 mb-0 shoppingCartTotal"> 0 $</p>
+                    <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                        data-delay="2000">
+                        <div class="toast-header">
+                            <span>✅</span>
+                            <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="toast-body text-white">
+                            Se aumentó correctamente la cantidad
+                        </div>
+                    </div>
+                    <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                        data-target="#comprarModal">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ </ul>
+
+
         <div class="social-icon">
             <a href="" class="social-icon__link"><span class="icon-whatsapp"></span></a>
             <a href="" class="social-icon__link"><span class="icon-facebook-square"></span></a>
@@ -72,20 +122,21 @@
            <div class="container container--flex">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                  <div class="card h-100">
-                    <img src="img/pasta.jpg" class="card-img-top" alt="...">
+                  <div class="item card h-100">
+                    <img src="img/pasta.jpg" class="item-img card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Pasta a la boloñesa</h5>
+                      <h5 class="item-name card-title">Pasta a la boloñesa</h5>
                       <p class="card-text">Disfuta de nuestro espaggeti especial</p>
+                      <h2 class="item-price ">18000 $</h2> 
                       
                     </div>
                    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Ver más
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal0">
+ Agregar al carrito
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal0" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -93,27 +144,37 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Difuta de una pasta a la boloñesa acompañada de oregano  y 250 gramos de nuestra mejor carne especial</p>
+        <p>esta seguro que desea agregar este producto al carro de compras?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" onclick="location.href='contacto.html'" class="btn btn-primary">Contactar</button>
+        <button type="button"  class="btn btn-primary addtocar">Si</button>
       </div>
     </div>
   </div>
 </div> 
                   </div>
                 </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img src="img/pizza.jpg" class="card-img-top" alt="...">
+
+
+
+
+                
+
+
+    
+    
+ <div class="col">
+                  <div class="item card h-100">
+                    <img src="img/pizza.jpg" class="item-img card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Pizza </h5>
+                      <h5 class="item-name card-title">Pizza </h5>
                       <p class="card-text">Nuestra especialidad, las pizzas ven y disfuta de uestras pizzas artesanas con sabores distintos a los que estas acostumbrado</p>
+                      <h2 class="item-price ">28000 $</h2> 
                     </div>
                     <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-  Ver más
+  Agregar al carrito
 </button>
 
 <!-- Modal -->
@@ -125,35 +186,38 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Disfruta de la mejor piza del sector con sabores especiales como
-          -Napolitana
-          -Peperonni
-          -Hawaiana
+        <p>esta seguro que desea agregar este producto al carro de compras?
         </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+        <button type="button"  class="btn btn-primary addtocar">Si</button>
       </div>
     </div>
   </div>
 </div>
 
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-100">
-                    <img src="img/raviolis.jpg" class="card-img-top" alt="...">
+</div>
+</div>
+
+
+
+
+
+
+                <div class="col ">
+                  <div class="item card h-100">
+                    <img src="img/raviolis.jpg" class="item-img card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Ravioles</h5>
-                      <p class="card-text">Degusta nuestros mas exquisitos raviolis a la italiana</p>
-                    </div>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                      Ver más
+                      <h5 class="card-title item-name">Ravioles</h5>
+                      <p class="card-text item-des" >Degusta nuestros mas exquisitos raviolis a la italiana</p>
+                      <h2 class="item-price ">20000 $</h2> 
+                     </div>
+
+                     <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                      Agregar al carrito
                     </button>
-                    
-                    <!-- Modal -->
+
                     <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -162,17 +226,28 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <p>Disfruta nuestros mejores ravioles a tu gusto tenemos a tu disposicion de carne, pollo y mixtos
+                            <p>esta seguro que desea agregar este producto al carro de compras?
                             </p>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" onclick="location.href='contacto.html'"  class="btn btn-primary">Contactar</button>
+                            <button type="button"  class="btn btn-primary addtocar">Si</button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+
+
+
+              
+               
+
+
+
+
+              <!--
                 </div>
                 <div class="col">
                   <div class="card h-100">
@@ -185,7 +260,7 @@
                       Ver más
                     </button>
                     
-                    <!-- Modal -->
+               
                     <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog">
                         <div class="modal-content">
@@ -217,7 +292,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+                
                       <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -249,7 +324,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+          
                       <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -280,7 +355,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+                    
                       <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -314,7 +389,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+                    
                       <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -347,7 +422,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+                
                       <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -380,7 +455,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+             
                       <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -413,7 +488,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+              
                       <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -446,7 +521,7 @@
                         Ver más
                       </button>
                       
-                      <!-- Modal -->
+                  
                       <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -465,13 +540,18 @@
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </div>  -->
+
+
                     </div>
                   </div>
               </div>
            </div>
        </div>
    </main>
+
+ 
+   
 <footer class="bg-dark text-center text-white">
   <div class="container p-4">
       <div class="row">
@@ -509,6 +589,7 @@
     © 2021 Copyright
   </div>
 </footer>
+<script src = "js/carrito.js" ></script> 
 <script src="js/menu.js"></script>
 <script src="js/modal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>

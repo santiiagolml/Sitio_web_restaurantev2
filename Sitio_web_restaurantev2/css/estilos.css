@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
         z-index: -1000;
     }
     .banner__img {
-        height: 600px;
+        max-height: 550px;
     }
     .banner__content {
         font-size: 2em;

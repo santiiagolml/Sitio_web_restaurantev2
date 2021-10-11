@@ -27,7 +27,7 @@
 }
 
 .testimonial-text{
-	padding: 10px 120px;
+	padding: 10px 130px;
 }
 
 .testimonial-text p{
@@ -39,10 +39,12 @@
 	color: #454545;
 }
 .our-team {
+    
     text-align: center;
     margin-bottom: 20px;
 }
 .our-team .container--flex {
+    padding-top: 20px;
    align-items: flex-start;
 }
 .our-team__title {

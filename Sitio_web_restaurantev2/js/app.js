@@ -90,18 +90,17 @@ const setCarrito = objeto => {
 //Se muestra en el carrito 
 const pintarCarrito = () => {
 	//console.log(carrito);
-	items.innerHTML= '<img src= ${producto.imagen.currentSrc}  alt="">'
+	items.innerHTML= 
 	Object.values(carrito).forEach(producto => {
 		templateCarrito.querySelector('th').textContent = producto.id;
 		templateCarrito.querySelectorAll('td')[0].textContent = producto.title;
 		templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad;
-
-		templateCarrito.querySelector('img').setAttribute("src", producto.imagen.currentSrc);
+		templateCarrito.querySelector('img').setAttribute("src", producto.imagen);
 		templateCarrito.querySelector('.btn-info').dataset.id = producto.id;
 		templateCarrito.querySelector('.btn-danger').dataset.id = producto.id;
 		templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio;
-		console.log(templateCarrito.querySelector('img').getAttribute("src"));
-
+		console.log(templateCarrito.querySelector('img'));
+		console.log(producto.imagen);
 		const clone = templateCarrito.cloneNode(true);
 		fragment.appendChild(clone);
 	})

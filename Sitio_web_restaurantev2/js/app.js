@@ -1,4 +1,5 @@
 const cards = document.getElementById('cards');
+const exampleModal1 = document.getElementById('exampleModal1');
 const items = document.getElementById('items');
 const footer = document.getElementById('footer');
 const templateCard =document.getElementById('template-card').content
@@ -7,7 +8,7 @@ const templateCarrito =document.getElementById('template-carrito').content
 const pintarImagenesDeCarrito = document.getElementById('cards');
 const fragment =document.createDocumentFragment();
 let carrito = {};
-
+let temporal;
 document.addEventListener('DOMContentLoaded', () => {
 	fetchData()
 	if (localStorage.getItem('carrito')){
@@ -18,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 //Detecta cuando se hace click en el boton comprar
+exampleModal1.addEventListener('click', e => {
+	addCarrito(e);
+})
+
 cards.addEventListener('click', e => {
 	addCarrito(e);
 })
@@ -57,9 +62,13 @@ const pintarCards = data =>{
 
 // Detecta los clics que se dan dentro del template
 const addCarrito = e => {
-	//console.log(e.target)
+	console.log(e.target.parentElement)
 	if (e.target.classList.contains('btn-dark')) {
-		setCarrito(e.target.parentElement);
+		temporal = e.target.parentElement;
+		//setCarrito(e.target.parentElement);
+	}else if (e.target.classList.contains('btn-darkk')) {
+		console.log(temporal);
+		setCarrito(temporal);
 	}
 	e.stopPropagation();
 }
@@ -93,7 +102,7 @@ const pintarCarrito = () => {
 	items.innerHTML= ''
 	Object.values(carrito).forEach(producto => {
 		//console.log(Object.keys(carrito).length);
-		console.log(producto.id);
+	//	console.log(producto.id);
 		templateCarrito.querySelector('th').textContent = producto.id;
 		templateCarrito.querySelectorAll('td')[0].textContent = producto.title;
 		templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad;

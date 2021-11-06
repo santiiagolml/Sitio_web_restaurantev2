@@ -84,11 +84,6 @@ const setCarrito = objeto => {
 	}
 //	console.log(producto);
 
-	/*
-	Object.values(producto).forEach(elemento => {
-		console.log(elemento.id);
-	})
-	*/
 	if(carrito.hasOwnProperty(producto.id)){
 		producto.cantidad = carrito[producto.id].cantidad + 1;
 	}
